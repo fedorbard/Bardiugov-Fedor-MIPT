@@ -1,0 +1,28 @@
+class Mama:
+    def __init__(self):
+        self.glaza = "карие"
+
+    def pokazat_glaza(self):
+        print("Глаза: " + self.glaza)
+
+
+class Papa:
+    def __init__(self):
+        self.ushi = "большие"
+
+    def pokazat_ushi(self):
+        print("Уши: " + self.ushi)
+
+
+class Syn(Mama, Papa):
+    def __init__(self):
+        Mama.__init__(self)
+        Papa.__init__(self)
+        self.name = "Артём"
+
+
+syn = Syn()
+
+print(syn.name)
+syn.pokazat_glaza()
+syn.pokazat_ushi()
